@@ -9,17 +9,15 @@ import static org.assertj.core.api.SoftAssertions.assertSoftly;
 
 import com.starcircle.test.Calculator;
 import com.starcircle.test.Person;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 // assertJ
 // 강점 : 메소드 체이닝을 지원하여 연쇄 호출하며 테스트 코드를 작성할 수 있다
-// 단점 :
+//       junit의 assert보다 다양한 기능을 지원한다
 public class AssertJTest {
 
     private final Calculator calculator = new Calculator();

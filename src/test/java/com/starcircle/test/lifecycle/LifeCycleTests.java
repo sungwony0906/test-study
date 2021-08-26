@@ -1,4 +1,4 @@
-package com.starcircle.test;
+package com.starcircle.test.lifecycle;
 
 import static org.junit.jupiter.api.Assertions.fail;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
