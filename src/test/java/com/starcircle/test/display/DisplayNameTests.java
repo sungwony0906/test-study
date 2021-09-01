@@ -28,7 +28,7 @@ public class DisplayNameTests {
     }
 
     @Nested
-    //@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
+    @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
     class A_year_is_not_supported {
 
         @Test

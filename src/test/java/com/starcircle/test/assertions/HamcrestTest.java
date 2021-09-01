@@ -2,10 +2,13 @@ package com.starcircle.test.assertions;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.allOf;
+import static org.hamcrest.Matchers.endsWith;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasProperty;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.lessThan;
+import static org.hamcrest.Matchers.notNullValue;
+import static org.hamcrest.Matchers.startsWith;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
 import com.starcircle.test.Calculator;
@@ -37,5 +40,27 @@ public class HamcrestTest {
                         hasProperty("lastName", equalTo("Doe"))));
     }
 
-    //matchers에 강점이 있는 것 같다
+    @Test
+    void dependentAssertions(){
+        assertAll("properties",
+                () -> {
+                    assertThat(person.getFirstName(),
+                            Matchers.allOf(
+                                    is(notNullValue()),
+                                    startsWith("J"),
+                                    endsWith("e")
+                                )
+                            );
+                },
+                () -> {
+                    assertThat(person.getLastName(),
+                            Matchers.allOf(
+                                    is(notNullValue()),
+                                    startsWith("D"),
+                                    endsWith("e")
+                            )
+                    );
+                }
+        );
+    }
 }

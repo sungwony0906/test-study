@@ -8,7 +8,7 @@ import org.junit.jupiter.api.condition.DisabledOnJre;
 import org.junit.jupiter.api.condition.EnabledForJreRange;
 import org.junit.jupiter.api.condition.EnabledOnJre;
 
-public class JreConditionTEsts {
+public class JreConditionTests {
     @Test
     @EnabledOnJre(JAVA_8)
     void onlyOnJava8() {

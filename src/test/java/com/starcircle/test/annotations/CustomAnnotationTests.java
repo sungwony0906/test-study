@@ -7,11 +7,11 @@ public class CustomAnnotationTests {
     @Fast
     @Test
     void fast(){
-
+        System.out.println("hihi");
     }
 
     @FastTest
     void fastTest(){
-
+        System.out.println("hihi22");
     }
 }
